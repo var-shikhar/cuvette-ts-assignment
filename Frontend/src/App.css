@@ -1,0 +1,144 @@
+#root {
+  text-align: center;
+  --background: rgb(218, 229, 245);
+  --blue: #001f8b;
+  --selected: #f5f3f3;
+  width: 100vw;
+  height: 100vh;
+}
+
+.vh-100 {
+  min-height: 100%;
+  height: 100vh;
+}
+
+.vw-100 {
+  min-width: 100%;
+  width: 100vh;
+}
+
+/* Custom CSS */
+.background {
+  background: var(--background);
+  background-color: var(--background);
+}
+
+.bg-dk-blue {
+  background: var(--blue);
+  background-color: var(--blue);
+}
+
+.bg-selected {
+  background: var(--selected);
+  background-color: var(--selected);
+}
+
+.bg-none {
+  background: transparent;
+  background-color: transparent;
+}
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  background: var(--background);
+  padding: 1rem;
+}
+
+.page-header {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-header h3 {
+  text-align: start;
+}
+
+.page-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-wrapper {
+  height: 100%;
+  max-height: max-content;
+  margin: 0.5rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.2rem;
+  border: 1px solid var(--selected);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 1s ease-in-out;
+}
+
+.card:hover {
+  background-color: var(--selected);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-action {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.card-action .icon {
+  width: 1rem;
+  cursor: pointer;
+}
+
+.cs-card-header {
+  text-align: start;
+  margin: 0.5rem 0;
+}
+
+.cs-card-header div {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cs-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cs-card-footer .status {
+  background-color: var(--selected);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--purple);
+  font-weight: bold;
+}
