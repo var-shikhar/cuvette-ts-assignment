@@ -1,5 +1,5 @@
 import "./App.css"
-import ApplicationList from "./ApplicationList"
+import ApplicationList from "./applicationList"
 
 function App() {
   return <ApplicationList />
