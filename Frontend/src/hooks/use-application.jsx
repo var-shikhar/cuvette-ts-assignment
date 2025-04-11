@@ -26,7 +26,7 @@ const useApplicationList = () => {
   // Fetch the Application List from the backend
   useEffect(() => {
     function fetchData() {
-      fetch(`${import.meta.env.VITE_APP_BE_URL}/job-application`)
+      fetch(`${import.meta.env.VITE_APP_BE_URL}/api/job-application`)
         .then((res) => res.json())
         .then((data) => setApplicationList(data))
         .catch((err) => console.log(err))
@@ -85,7 +85,7 @@ const useApplicationList = () => {
 
   //  Function for Updating the Status of the Application
   function updateApplicationStatus(status) {
-    fetch(`${import.meta.env.VITE_APP_BE_URL}/job-application/`, {
+    fetch(`${import.meta.env.VITE_APP_BE_URL}/api/job-application/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -109,7 +109,7 @@ const useApplicationList = () => {
 
   // Delete Application
   function deleteApplication(id) {
-    fetch(`${import.meta.env.VITE_APP_BE_URL}/job-application/${id}`, {
+    fetch(`${import.meta.env.VITE_APP_BE_URL}/api/job-application/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -129,7 +129,7 @@ const useApplicationList = () => {
     const errors = validateForm()
     setFormErrors(errors)
     if (Object.keys(errors).length === 0) {
-      fetch(`${import.meta.env.VITE_APP_BE_URL}/job-application`, {
+      fetch(`${import.meta.env.VITE_APP_BE_URL}/api/job-application`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
